@@ -95,14 +95,14 @@
 	
 	glLoadIdentity();
 	glTranslatef(-1.5, 0.0, -6.0);
-	glRotatef(rota, 0.0, 0.0, 1.0);
+	glRotatef(rota, 0.0, 1.0, 0.0);
 	glVertexPointer(3, GL_FLOAT, 0, triangleVertices);
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
     
 	glLoadIdentity();
 	glTranslatef(1.5, 0.0, -6.0);
-	glRotatef(rota, 0.0, 0.0, 1.0);
+	glRotatef(rota, 1.0, 0.0, 0.0);
 	glVertexPointer(3, GL_FLOAT, 0, squareVertices);
     glEnableClientState(GL_VERTEX_ARRAY);
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
