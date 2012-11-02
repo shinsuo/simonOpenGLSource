@@ -73,15 +73,18 @@
     glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
     glViewport(0, 0, backingWidth, backingHeight);
 
-	glLoadIdentity();
+	//使用glClear才会出现渲染效果，否则屏幕不会出现任何东西
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+//    glMatrixMode(GL_MODELVIEW);
+//    glLoadIdentity();
 	GLfloat squareVerts[] = {
-		-1.0, 1.0, 0.0,
-		-1.0, -1.0, 0.0,
-		1.0, -1.0, 0.0,
-		1.0, 1.0, 0.0
+		-1.0, 1.0, -6.0,
+		-1.0, -1.0, -6.0,
+		1.0, -1.0, -6.0,
+		1.0, 1.0, -6.0
 	};
-	glTranslatef(0.0, 0.0, -5.0);
+//	glTranslatef(0.0, 0.0, -5.0);
 	glColor4f(1.0, 0.0, 0.0, 1.0);
 	glVertexPointer(3, GL_FLOAT, 0, squareVerts);
 	glEnableClientState(GL_VERTEX_ARRAY);
